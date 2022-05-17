@@ -26,7 +26,7 @@ export class UserService {
         throw new HttpException(
           {
             success: false,
-            status: '400',
+            status: 'Error',
             msg: 'Email already registered !!!',
           },
           HttpStatus.CONFLICT,
@@ -59,8 +59,8 @@ export class UserService {
         throw new HttpException(
           {
             success: false,
-            status: 'Bad Request',
-            msg: 'Sorry !!! invalid credentials',
+            status: 'Error',
+            msg: 'Sorry !!! Invalid Credentials',
           },
           HttpStatus.NOT_FOUND,
         );
@@ -72,7 +72,7 @@ export class UserService {
           {
             success: false,
             status: 'Bad Request',
-            msg: 'Sorry !!! invalid credentials',
+            msg: 'Sorry !!! Invalid Credentials',
           },
           HttpStatus.NOT_FOUND,
         );
@@ -96,7 +96,7 @@ export class UserService {
           {
             success: false,
             status: 'Not Found',
-            msg: 'Sorry !!! user record not found',
+            msg: 'Sorry !!! User record not found',
           },
           HttpStatus.NOT_FOUND,
         );

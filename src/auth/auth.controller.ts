@@ -38,7 +38,7 @@ import { AppInterceptor } from 'src/interceptor/app.interceptor';
         if (!user) {
           return res.status(HttpStatus.BAD_REQUEST).json({
             success: false,
-            status: 'Bad Request',
+            status: 'Error !',
             msg: 'Unable To Create User !!!',
           });
         }
@@ -52,7 +52,7 @@ import { AppInterceptor } from 'src/interceptor/app.interceptor';
   
         return res.status(HttpStatus.CREATED).json({
           success: true,
-          status: 'Created',
+          status: 'Success !',
           msg: 'User Created successfully !!!',
           token,
         });
@@ -83,8 +83,8 @@ import { AppInterceptor } from 'src/interceptor/app.interceptor';
         if (!user) {
           return res.status(HttpStatus.BAD_REQUEST).json({
             success: false,
-            status: 'Bad Request',
-            msg: 'Sorry !! something went wrong unable to login',
+            status: 'Error',
+            msg: 'Something went wrong unable to login',
           });
         }
         const payload = {
